@@ -10,7 +10,11 @@
         <title>@yield('title')</title>
     </head>
     @include('layouts.navigation')
-    @include('header')
+    
+    @if (Route::is('index'))
+        @include('header')
+    @endif
+    
     <div id="root">
         <body>
             @yield('content')
